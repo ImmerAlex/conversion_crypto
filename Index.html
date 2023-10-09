@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/reset.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <Title></Title>
+</head>
+
+<body>
+
+<div class="ContainerNav">
+    <div class="ContentBurger">
+        <div class="Burger"></div>
+    </div>
+    <div class="ContainerItemNav">
+        <li class="ListeCrypto"><a href="#BtcSection">btc</a></li>
+        <li class="ListeCrypto"><a href="#EthSection">eth</a></li>
+        <li class="ListeCrypto"><a href="#BnbSection">bnb</a></li>
+    </div>
+</div>
+
+
+<div class="Container">
+    <section class="ItemSection" id="BtcSection">
+        <div class="ContentImage">
+            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="Image Btc" class="BtcImage">
+        </div>
+        
+        <div class="ContentPrice">
+            <p class="TitlePrice">Prix Bitcoin</p>
+            <h1 id="BtcPrice">...</h1>
+        </div>
+
+        <div class="ContentConvert">
+            <input type="number" placeholder="Nombre Btc" id="InputNbrBtc">
+            <p><span id="ResultConvertBtc">...</span>€</p>
+        </div>
+    </section>
+
+    <section class="ItemSection" id="EthSection">
+        <div class="ContentImage">
+            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" alt="Image Eth">
+        </div>
+        
+        <div class="ContentPrice">
+            <p class="TitlePrice">Prix Etherum</p>
+            <h1 id="EthPrice">...</h1>
+        </div>
+
+        <div class="ContentConvert">
+            <input type="number" placeholder="Nombre Eth" id="InputNbrEth">
+            <p><span id="ResultConvertEth">...</span>€</p>
+        </div>
+    </section>
+
+    <section class="ItemSection" id="BnbSection">
+        <div class="ContentImage">
+            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/4687.png" alt="Image Eth">
+        </div>
+        
+        <div class="ContentPrice">
+            <p class="TitlePrice">Prix Binance Coin</p>
+            <h1 id="BnbPrice">...</h1>
+        </div>
+
+        <div class="ContentConvert">
+            <input type="number" placeholder="Nombre Bnb" id="InputNbrBnb">
+            <p><span id="ResultConvertBnb">...</span>€</p>
+        </div>
+    </section>
+</div>
+
+<script src="public/javaScript/main.js"></script>
+</body>
+</html>

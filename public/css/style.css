@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.Container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.ItemSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    flex: none;
+    height: 100vh;
+    width: 100vw;
+    font-size: 21px;
+}
+
+.ContainerNav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.ContentBurger {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    transition: 300ms;
+}
+
+.ContentBurger.Active {
+    border-radius: 50% 50% 0 0;
+}
+
+.Burger {
+    position: relative;
+    height: 2px;
+    width: 20px;
+    background-color: #f1f1f1;
+    transition: 300ms;
+}
+
+.Burger::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+    width: 20px;
+    background-color: #f1f1f1;
+    transition: 300ms;
+}
+
+.Burger::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    height: 2px;
+    width: 20px;
+    background-color: #f1f1f1;
+    transition: 300ms;
+}
+
+.ContentBurger.Active .Burger {
+    transform: rotate(45deg);
+}
+
+.ContentBurger.Active .Burger::before {
+    bottom: 0;
+    transform: rotate(90deg);
+}
+
+.ContentBurger.Active .Burger::after {
+    opacity: 0;
+}
+
+.ContainerItemNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    color: #f1f1f1;
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: 300ms;
+}
+
+.ContainerItemNav.Active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ContainerItemNav.Active {
+    border-radius: 0 0 35px 35px;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+.ListeCrypto:hover a {
+    text-decoration: underline;
+}
+
+.ListeCrypto {
+    margin-bottom: 20px;
+}
+
+.ContentImage .BtcImage {
+    transform: rotate(-13deg) scale(1.2);
+}
+
+.ContentPrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#BtcSection {
+    background-color: #F7931A;
+}
+
+#EthSection {
+    background-color: #ECEFF0;
+}
+
+#BnbSection {
+    background-color: #F0B90B;
+}
+
+.ContentConvert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContentConvert input {
+    padding: 10px;
+    margin-bottom: 5px;
+}
